@@ -50,20 +50,9 @@ class Colours extends Color {
   const Colours.fromRGBO(int r, int g, int b, double opacity) : super.fromRGBO(r,g,b,opacity);
 
   
+  
 
 
   
   
-}
-
-
-class Account {
-  void method() {
-
-    Colours c = Colours.fromARGB(255,255,255, 0);
-    int red = c.red;
-    print(red);
-
-  }
-
 }
