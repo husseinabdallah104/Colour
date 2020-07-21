@@ -32,7 +32,23 @@ class LMColor extends Color {
 
   LMColor.fromCMYK(double c, double m, double y, double k) : super(_valfromCMYK(c,m,y,k));
 
+  double get cieLightness => cieLAB()[0];
 
+  double get cieA => cieLAB()[1];
+
+  double get cieB => cieLAB()[2];
+    
+  
+  double get cyan => cmyk()[0];
+
+  double get magenta => cmyk()[1];
+
+  double get yellow => cmyk()[2];
+
+  double get keyBlack => cmyk()[3];
+
+
+  
   // from CIELAB Helpers
   
   static int _valfromCIE(int l, int a, int b, int alpha) {
@@ -119,42 +135,7 @@ class LMColor extends Color {
         List<double> cmyk = [c, m, y, k];
         return cmyk;
     }
-  
-  // double get hue => hsba()[0];
 
-  // double get saturation => hsba()[1];
 
-  // double get brightness => hsba()[2];
-
-  double get cieLightness => cieLAB()[0];
-
-  double get cieA => cieLAB()[1];
-
-  double get cieB => cieLAB()[2];
-    
-  
-  double get cyan => cmyk()[0];
-
-  double get magenta => cmyk()[1];
-
-  double get yellow => cmyk()[2];
-
-  double get keyBlack => cmyk()[3];
-
-    // func cyan() -> CGFloat {
-    //     return cmyk().c
-    // }
-    
-    // func magenta() -> CGFloat {
-    //     return cmyk().m
-    // }
-    
-    // func yellow() -> CGFloat {
-    //     return cmyk().y
-    // }
-    
-    // func keyBlack() -> CGFloat {
-    //     return cmyk().k
-    // }
   
 }
